@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafii Portofolio</title>
+    <title>Rafii's Portofolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    
     <nav>
         <div class="logo-icon">
             
@@ -25,48 +26,69 @@
     
     <section class="section-container">
         <!--Home-->
+        
         <section id="home">
             <header>
-                <h1>Hi Rafii, Welcome to website!</h1>
+                <h1>Hi <span id="name!"></span>! Welcome to Rafii's Internet Cafe!</h1>
                 
             </header>
-
+            
             <article>
-                <p>Mantap Banget</p>
+                
 
-                <div class="banner-container"></div>
+                <div class="banner-container">
+
+                    <p>Isi Bagian</p>
+
+                </div>
+
             </article>
 
         </section>
+        
 
         <hr>
 
         <!-- Our Facilities-->
-        <section id="facilities">
-            <header>
-                <h1>Our Facilities</h1>
-            </header>
+<section id="facilities">
+    <header>
+        <h1>Our Facilities</h1>
+    </header>
 
-
-            <article class="facility-list">
-                <div>    
-                    <div style="width: 50px; height: 50px; border: 1px solid black; "></div>
-                <h5>Free Refill</h5 > 
-                </div>
-
-                <div>
-                    <div style="width: 50px; height: 50px; border: 1px solid black; "></div>
-                <h5>Free Refill</h5 >
-                </div> 
-
-                <div>
-                    <div style="width: 50px; height: 50px; border: 1px solid black; "></div>
-                <h5>Free Refill</h5 > 
+    <article class="facility-list">
+        <div>    
+            <div style="width: 100px; height: 100px; border: 1px solid black;">
+                <img style="width:px; height:px" 
+                
+               
+                src="assets/.jpg">
             </div>
+            <h5>Free Refill</h5> 
+        </div>
 
-            </article>
+        <div>
+            <div style="width: 100px; height: 100px; border: 1px solid black; ">
+                <img style="width:px; height:px" 
+                
+               
+                src="assets/.jpg">
+            </div>
+            <h5>Free Refill</h5>
+        </div> 
 
-        </section>
+        <div>
+            <div style="width: 100px; height: 100px; border: 1px solid black; ">
+                <img style="width:px; height:px" 
+                
+               
+                src="assets/.jpg">
+            </div>
+            <h5>Free Refill</h5> 
+        </div>
+    </article>
+</section>
+
+
 
         <hr>
         
@@ -77,11 +99,47 @@
             </header>
 
             <section class="message-us-section">
+
+                
                 <!--Form-->
                 <section>
                     <form>
-                        <label>Name:</label>
-                        <input />
+                        <label for="name">Name : </label>
+                        <input id="name" type="test" />
+
+                        <br>
+							<td><label>Date of birth</label></td>
+							<td><input type="date" name="tgl_lahir"></td>
+                        
+                        
+                        </select>
+                        
+                        <br>
+                        <p>Jenis Kelamin :</p>
+                        
+                        <input type="radio" id="Laki-Laki" name="kelamin" value="Laki-Laki">
+                        <label for="Laki-Laki">Laki-Laki</label><br>
+            
+                        <input type="radio" id="Perempuan" name="kelamin" value="Perempuan">
+                        <label for="Perempuan">Perempuan</label><br>
+
+                        <tr class="form-table">
+                            <td class="label">Pesan</td>
+                            <td class="label">:</td>
+                            <td>
+                              <textarea
+                                name="message"
+                                class="input-text"
+                                id="message"
+                                placeholder="Ketik Pesan"
+                                rows="4"
+                              ></textarea>
+                            </td>
+                        </tr>
+
+            
+                        <input type="submit" value="Submit">
+            
                     </form>
                 </section>
 
@@ -98,8 +156,9 @@
     
     <footer>
 
-
     </footer>
+
 </body>
+
 
 </html>

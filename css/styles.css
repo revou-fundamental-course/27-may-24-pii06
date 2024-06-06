@@ -4,7 +4,7 @@
 nav {
     display: flex;
     justify-content: space-between; 
-    background-color:burlywood;
+    background-color:rgba(206, 220, 221, 0.695);
 }
 
 nav>section{
@@ -33,9 +33,11 @@ nav>section{
     border: 1px solid black;
 }
 
+
 .facility-list {
     display: flex;  
     justify-content: space-around;
+    background-image: url();
 }
 
 .form-result {
@@ -48,9 +50,11 @@ nav>section{
 }
 
 .result-container {
-    width: 100%;
+    margin-left: 15%;
+    width: 50%;
+    height: 50%;
 }
 
 .section-container {
-    background-color:bisque ;
+    background-image: url("../assets/background.jpg");
 }
