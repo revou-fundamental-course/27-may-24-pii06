@@ -1,14 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafii's Portofolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Rafii's Portofolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
-    
     <nav>
         <div class="logo-icon">
             
@@ -16,20 +18,37 @@
         </div> 
 
         <section>
-            <a class="nav-item" href="#home">Home</a>    
+            <a class="nav-item" href="#home">Home</a>
+            <a class="nav-item" href="#profile">Our Profile</a>    
             <a class="nav-item" href="#facilities">Our Facilities</a>
-            <a class="nav-item" href="#message-us">Message Us</a>
+            <a class="nav-item" href="#message-us">Sign Up</a>
         </section>
     </nav>
 
     <hr>
+
+    <section>
+        <aside>
+            <h2><a></a></h2>
+            <ul style="padding: 0; margin: 0; list-style: none;">
+                <li>
+                    <a href="https://revou.co/" target="_blank">
+                        <img src="assets/revou.png" style="width: 100%; max-width: 150%; border-radius: 0; margin-bottom: 0;">
+                    </a>
+                </li>
+
+            </ul>
+        </aside>
+
+        <hr>
     
     <section class="section-container">
         <!--Home-->
         
         <section id="home">
             <header>
-                <h1>Hi <span id="name!"></span>! Welcome to Rafii's Internet Cafe!</h1>
+                <h1>Hi <span id="name"></span>! Welcome to Rafii's Internet Cafe!</h1>
+                
                 
             </header>
             
@@ -37,8 +56,14 @@
                 
 
                 <div class="banner-container">
+                    
 
-                    <p>Isi Bagian</p>
+                    
+                    <div class="">
+
+                    </div>
+                    
+                    
 
                 </div>
 
@@ -48,6 +73,44 @@
         
 
         <hr>
+
+        <section id="profile">
+            <header>
+                <h1>Our Profile</h1>
+            </header>
+
+            <article class="profile-list">
+            <div>
+                <div style="width: 250px; height: 250px; border: 2px solid black;">
+                <img style="width:250px; height:250px" 
+                
+                src="assets/Logocafe.png">
+                </div>
+                <h3>Rafii's Internet Cafe Logo</h3>
+
+                <hr>
+
+                <p>Rafii's Internet Cafe adalah tujuan utama untuk para pecinta game dan penggemar kopi yang mencari pengalaman yang unik dan modern. Dengan perpaduan fasilitas PC gaming terbaru dan suasana yang nyaman, kami menawarkan ruang yang ideal bagi gamer untuk bersosialisasi, bermain game favorit mereka, dan menikmati minuman kopi berkualitas. Didukung oleh staf yang ramah dan berpengetahuan luas, kami berkomitmen untuk memberikan pengalaman terbaik bagi setiap pengunjung kami. Sambutlah era baru dari hiburan dan rekreasi di Rafii's Internet Cafe, tempat di mana game bertemu dengan kenyamanan modern.</p>
+
+                <tr>
+                        Kami memiliki beberapa cabang di indonesia, yaitu
+                        <br>
+                        Balikpapan, Kalimantan Timur
+                        <br>
+                        Samarinda, Kalimantan Timur
+                        <br>
+                        Sangatta, Kalimantan Timur
+                    </tr>
+
+                    <br>
+
+
+            </div>
+
+        </section>
+
+        <hr>
+
 
         <!-- Our Facilities-->
 <section id="facilities">
@@ -95,69 +158,94 @@
         <!-- Message Us -->
         <section id="message-us">
             <header>
-                <h1>Message Us</h1>
+                <h1>Register Up</h1>
             </header>
 
             <section class="message-us-section">
 
-                
-                <!--Form-->
-                <section>
-                    <form>
-                        <label for="name">Name : </label>
-                        <input id="name" type="test" />
 
-                        <br>
-							<td><label>Date of birth</label></td>
-							<td><input type="date" name="tgl_lahir"></td>
-                        
-                        
-                        </select>
-                        
-                        <br>
-                        <p>Jenis Kelamin :</p>
-                        
-                        <input type="radio" id="Laki-Laki" name="kelamin" value="Laki-Laki">
-                        <label for="Laki-Laki">Laki-Laki</label><br>
-            
-                        <input type="radio" id="Perempuan" name="kelamin" value="Perempuan">
-                        <label for="Perempuan">Perempuan</label><br>
+  <form name="datapribadi" method="" action="">
 
-                        <tr class="form-table">
-                            <td class="label">Pesan</td>
-                            <td class="label">:</td>
-                            <td>
-                              <textarea
-                                name="message"
-                                class="input-text"
-                                id="message"
-                                placeholder="Register Member"
-                                rows="4"
-                              ></textarea>
-                            </td>
-                        </tr>
+    <label for="input-nama">Nama</label>
+    <input type="text" class="form-control" name="nama" id="input-nama">
+    <br />
+    <label for="input-email">Email</label>
+    <input type="email" class="form-control" name="email" id="input-email">
+    <br />
 
-            
-                        <input type="submit" value="Submit">
-            
-                    </form>
-                </section>
-
-                <!--Result-->
-                <section class="result-container">
-                    <div class="form-result">
-                        
-                    </div>
-                </section>
-            </section>
-        </section>
-
-    </section>
+    <label for="select-date">Tanggal lahir</label>
+    <input type="date" name="Tanggal-Lahir" id="select-date">
     
-    <footer>
+    <br />
 
-    </footer>
 
+    <label for="text-alamat">Alamat</label>
+    <textarea class="form-control mb-3" name="alamat" id="text-alamat" rows="3"></textarea>
+    <br />
+
+    <button type="button" onClick='inputdata()' class="btn btn-success">Simpan</button>
+    <button type="reset" class="btn btn-warning">Batal</button>
+    <br />
+
+  </form>
+
+  <hr>
+
+
+  <script>
+   
+    function inputdata() {
+    
+      var n = document.forms['datapribadi']['nama'].value;
+      var e = document.forms['datapribadi']['email'].value;
+      var p = document.forms['datapribadi']['Tanggal-Lahir'].value;
+      var a = document.forms['datapribadi']['alamat'].value;
+      
+      var tabel = document.getElementById("databel");
+      
+      var baris = tabel.insertRow(1);
+      
+      var kol1 = baris.insertCell(0);
+      var kol2 = baris.insertCell(1);
+      var kol3 = baris.insertCell(2);
+      var kol4 = baris.insertCell(3);
+      
+      kol1.innerHTML = n;
+      kol2.innerHTML = e;
+      kol3.innerHTML = p;
+      kol4.innerHTML = a;
+    }
+  </script>
+
+  <section class="result-container">
+        <div class="form-result">
+
+            <table class="table" id="databel">
+            
+                <thead>
+                  <tr>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Tanggal lahir </th>
+                    <th scope="col">Alamat</th>
+                  </tr>
+                </thead>
+              </table>
+
+</div>
+</section>
+
+
+<br />
+
+<hr >
+
+
+<footer>
+    <p>&copy; Created by Rafii </p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 
 
