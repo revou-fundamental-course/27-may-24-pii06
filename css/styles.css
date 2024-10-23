@@ -1,218 +1,149 @@
-/* Ini Css   */
-
-
-nav {
-    display: flex;
-    justify-content: space-between; 
-    background-color:rgba(206, 220, 221, 0.695);
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-nav>section{
-    display: flex;
-    align-items: center;
-}
-.logo-icon {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-image: url('../assets/revou.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-
-.nav-item {
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 8px;
-    color: black;
-    text-decoration:solid;
-}
-
-.banner-container    {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    background-image: url('../assets/warnet1.jpg');
-    height: 500px;
-    border: 1px solid black;
-}
-
-
-.facility-list {
-    display: flex;  
-    justify-content: space-around;
-    background-image: url();
-}
-
-.form-result {
-    height: 100px;
-    
-    border: 2px solid black;
-}
-
-.message-us-section {
-    display: flex;
-}
-
-.result-container {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-.table {
+/* Background with Gradient */
+.background {
+    position: absolute;
     width: 100%;
-    border-collapse: collapse;
+    height: 100%;
+    background: linear-gradient(135deg, #ff4e50, #ff6f69, #ff9a9e);
+    z-index: -2;
+    filter: blur(4px);
 }
 
-.table th,
-.table td {
-    padding: 12px 16px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+/* Confetti Animation */
+.confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2016/03/31/19/55/confetti-1298847_1280.png') repeat;
+    opacity: 0.6;
+    animation: fall 10s linear infinite;
+    z-index: -1;
 }
 
-.table th {
-    background-color: #f2f2f2;
-}
-
-.table th:first-child,
-.table td:first-child {
-    border-left: none;
-}
-
-.table th:last-child,
-.table td:last-child {
-    border-right: none;
-}
-
-
-.table tbody tr:hover {
-    background-color: #f5f5f5;
-}
-
-
-@media screen and (max-width: 600px) {
-    .table th,
-    .table td {
-        padding: 8px 12px;
+@keyframes fall {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 100%;
     }
 }
 
-.section-container {
-    background-image: url("../assets/background.jpg");
-}
-
-
-nav {
-    background-color: #85D6B7;
-    overflow: hidden;
-
-}
-
-nav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: background-color 0.4s ; 
-}
-
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-nav a.active{
-    background-color: #ddd;
-    color: black;
-}
-
-section {
-    padding: 20px;
-    flex: 1;
-    padding: 20px;
-}
-
-aside {
-    width: 30px;
-    background: linear-gradient(to bottom, #c7d2d4, #fff); 
-    color: #000000;
-    padding: 10px;
-    position: fixed; 
+/* Balloons */
+.balloons {
+    position: absolute;
+    width: 100%;
     height: 100%;
-    right: 0;
-    box-sizing: border-box; 
-    transition: width 0.5s; 
+    z-index: 0;
 }
 
-aside:hover {
-width: 80px; 
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 120px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
-margin-top: 0; 
+.red { left: 15%; background: #ff6f69; }
+.yellow { left: 40%; background: #f8b400; }
+.blue { left: 65%; background: #6ec1e4; }
+.pink { left: 85%; background: #ffc0cb; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-150px); }
+    100% { transform: translateY(0); }
 }
 
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-
-ul li a {
-color: #000000;
-text-decoration: none;
-padding: 10px;
-display: block;
-margin-right: 3px;
-}
-
-ul li a:hover {
-background-color: #555;
-}
-
-div.content {
-    margin-left: 20px; 
-}
-
-footer {
-    background-color: #ffffff;
-    color: #070707;
+/* Invitation Container */
+.container {
+    position: relative;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 1px;
-    position:fixed;
-    bottom: 0;
-    width: 100%;
-    height: 1;
-}
-aside a {
-    overflow: hidden;
-    display: block;
-    transition: transform 0.4s;
-    transition: margin 0.8s; 
 }
 
-aside a img {
-    width: 50%;
-    max-width:70%;
-    height:fit-content;
-    border-radius: 50px;
-    margin-bottom: 0;
-    box-sizing: border-box;
-    transform: scale(1); 
-    transition: transform 0.4s; 
+/* Header */
+.header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.8rem;
+    color: #ff4e50;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #ffc1c1;
 }
 
-aside a:hover img {
-    transform: scale(1.6); 
+.header .tagline {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-aside:not(:hover) a {
-    transform: scale(4);
-    width: 100%;
-    max-width: 100%;
+/* Birthday Cake Image */
+.birthday-cake {
+    width: 200px;
+    margin: 20px auto;
+}
+
+/* Content */
+.content .subtitle {
+    font-size: 2rem;
+    color: #c06c84;
+    margin-bottom: 10px;
+}
+
+.content .description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.event-details p {
+    font-size: 1rem;
+    color: #ff4e50;
+    margin: 5px 0;
+}
+
+/* Wish Section */
+.wish-section .title {
+    font-size: 1.8rem;
+    color: #ff6f69;
+    margin: 20px 0;
+}
+
+.custom-text {
+    width: 80%;
+    max-width: 500px;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ff4e50;
+    outline: none;
+    resize: none;
+    transition: transform 0.2s;
+}
+
+.custom-text:focus {
+    transform: scale(1.05);
+    border-color: #ff9a9e;
+}
+.subtitles {
+    font-family: 'Times New Roman', serif;
+    font-size: 100%;
+    color: #e63946; /* Warna merah lembut */
+    margin-bottom: 15px;
 }
