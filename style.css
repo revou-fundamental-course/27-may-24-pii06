@@ -1,0 +1,826 @@
+/* CSS Reset dan Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background dan Layout Utama */
+body {
+    background-color: #272730;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: linear-gradient(45deg, #1c1c24 25%, transparent 25%, transparent 75%, #1c1c24 75%),
+                      linear-gradient(45deg, #1c1c24 25%, transparent 25%, transparent 75%, #1c1c24 75%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #1e1e26;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 
+                0 0 15px rgba(138, 43, 226, 0.3),
+                0 0 30px rgba(0, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(79, 236, 253, 0.2);
+}
+
+/* Efek Border Neon */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ffff, transparent, #8a2be2, transparent, #00ffff);
+    z-index: -1;
+    background-size: 400%;
+    animation: borderGlow 15s linear infinite;
+    opacity: 0.5;
+    border-radius: 16px;
+}
+
+@keyframes borderGlow {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Header dan Judul */
+h1 {
+    color: #00ffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5),
+                 0 0 10px rgba(0, 255, 255, 0.3),
+                 0 0 15px rgba(0, 255, 255, 0.2);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Status Bar */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #15151e;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(79, 236, 253, 0.3);
+}
+
+.stat {
+    text-align: center;
+    position: relative;
+    padding: 8px 15px;
+    border-radius: 8px;
+    min-width: 100px;
+    background: rgba(30, 30, 38, 0.7);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #8a8aaa;
+    margin-bottom: 5px;
+}
+
+.stat span {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #00ffff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* Pengaturan Game */
+.game-settings {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(79, 236, 253, 0.5);
+    background-color: #272735;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-grow: 1;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+select:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+select:hover {
+    background-color: #2d2d40;
+}
+
+/* Custom Select Arrow */
+.select-wrapper {
+    position: relative;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.select-wrapper::after {
+    content: '⯆';
+    font-size: 1rem;
+    color: #00ffff;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Petunjuk Game */
+#hint {
+    color: #c8c8e0;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    background-color: #25252f;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 3px solid #8a2be2;
+}
+
+/* Container Input */
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid rgba(138, 43, 226, 0.5);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: #2a2a38;
+    color: #ffffff;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #8a2be2;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+    background-color: #32323f;
+}
+
+/* Tombol Submit dengan Efek Neon */
+button#submit {
+    background: linear-gradient(45deg, #8a2be2, #4a2be2);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+button#submit:hover {
+    background: linear-gradient(45deg, #9a3bf2, #5a3bf2);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
+    transform: translateY(-2px);
+}
+
+button#submit:active {
+    transform: translateY(1px);
+}
+
+/* Area Hasil */
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #1a1a25;
+    border: 1px solid rgba(79, 236, 253, 0.2);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    scrollbar-width: thin;
+    scrollbar-color: #8a2be2 #1a1a25;
+}
+
+#result::-webkit-scrollbar {
+    width: 8px;
+}
+
+#result::-webkit-scrollbar-track {
+    background: #1a1a25;
+    border-radius: 10px;
+}
+
+#result::-webkit-scrollbar-thumb {
+    background-color: #8a2be2;
+    border-radius: 10px;
+}
+
+#result p {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgba(30, 30, 40, 0.6);
+    border-left: 3px solid #4f4f60;
+}
+
+/* Kotak Tebakan Kata */
+.word-guess-box {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.letter-box {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(79, 236, 253, 0.3);
+    background-color: #2a2a38;
+}
+
+/* Warna Status Tebakan */
+.success {
+    color: #00ffdd;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 255, 221, 0.5);
+}
+
+.wrong {
+    color: #ff4f4f;
+    position: relative;
+}
+
+.wrong::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 79, 79, 0.7);
+    transform: rotate(-5deg);
+}
+
+.partial {
+    color: #ffcc00;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+.correct {
+    color: #2eff87;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(46, 255, 135, 0.5);
+}
+
+/* Kotak Huruf dengan Status */
+.letter-box.correct {
+    background-color: rgba(46, 255, 135, 0.2);
+    border-color: #2eff87;
+    box-shadow: 0 0 10px rgba(46, 255, 135, 0.5);
+}
+
+.letter-box.partial {
+    background-color: rgba(255, 204, 0, 0.2);
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.letter-box.wrong {
+    background-color: rgba(255, 79, 79, 0.1);
+    border-color: rgba(255, 79, 79, 0.5);
+}
+
+/* Tombol Kontrol Game */
+.game-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.game-controls button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button#clueButton {
+    background: linear-gradient(45deg, #00ccff, #00a3cc);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.4);
+}
+
+button#clueButton:hover {
+    background: linear-gradient(45deg, #00dcff, #00b3dc);
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+button#spinButton {
+    background: linear-gradient(45deg, #ff7700, #ff5500);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 119, 0, 0.4);
+}
+
+button#spinButton:hover {
+    background: linear-gradient(45deg, #ff8800, #ff6600);
+    box-shadow: 0 0 15px rgba(255, 119, 0, 0.6);
+    transform: translateY(-2px);
+}
+
+button#newWord {
+    background: linear-gradient(45deg, #4caf50, #2e7d32);
+    color: white;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);
+}
+
+button#newWord:hover {
+    background: linear-gradient(45deg, #5cbf60, #3e8d42);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+    transform: translateY(-2px);
+}
+
+button#history {
+    background: linear-gradient(45deg, #9c27b0, #7b1fa2);
+    color: white;
+    box-shadow: 0 0 10px rgba(156, 39, 176, 0.4);
+}
+
+button#history:hover {
+    background: linear-gradient(45deg, #ac37c0, #8b2fb2);
+    box-shadow: 0 0 15px rgba(156, 39, 176, 0.6);
+    transform: translateY(-2px);
+}
+
+button#switchGame {
+    background: linear-gradient(45deg, #3f51b5, #303f9f);
+    color: white;
+    box-shadow: 0 0 10px rgba(63, 81, 181, 0.4);
+}
+
+button#switchGame:hover {
+    background: linear-gradient(45deg, #4f61c5, #4050af);
+    box-shadow: 0 0 15px rgba(63, 81, 181, 0.6);
+    transform: translateY(-2px);
+}
+
+button#giveup {
+    background: linear-gradient(45deg, #f44336, #d32f2f);
+    color: white;
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.4);
+}
+
+button#giveup:hover {
+    background: linear-gradient(45deg, #ff5346, #e33f3f);
+    box-shadow: 0 0 15px rgba(244, 67, 54, 0.6);
+    transform: translateY(-2px);
+}
+
+button#reset {
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+}
+
+button#reset:hover {
+    background: linear-gradient(45deg, #ffd117, #ff9800);
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Status Timer */
+.danger {
+    color: #ff4f4f !important;
+    animation: pulse 1s infinite;
+}
+
+.warning {
+    color: #ffcc00 !important;
+}
+
+@keyframes pulse {
+    0% { text-shadow: 0 0 5px rgba(255, 79, 79, 0.5); }
+    50% { text-shadow: 0 0 15px rgba(255, 79, 79, 0.8); }
+    100% { text-shadow: 0 0 5px rgba(255, 79, 79, 0.5); }
+}
+
+/* Pesan Alert */
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    z-index: 100;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease, fadeOut 0.3s 2.7s ease forwards;
+    border-left: 5px solid;
+    max-width: 300px;
+}
+
+.alert.info {
+    background-color: rgba(0, 150, 255, 0.9);
+    border-left-color: #0077ff;
+}
+
+.alert.warning {
+    background-color: rgba(255, 153, 0, 0.9);
+    border-left-color: #ff7700;
+}
+
+.alert.success {
+    background-color: rgba(0, 200, 83, 0.9);
+    border-left-color: #00a844;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Modal Riwayat */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #1e1e26;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5),
+                0 0 15px rgba(138, 43, 226, 0.3);
+    border: 1px solid rgba(79, 236, 253, 0.2);
+    animation: scaleIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #c8c8e0;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+.close:hover {
+    color: #ff4f4f;
+    transform: scale(1.1);
+}
+
+/* Tabel Riwayat */
+.modal-content h3 {
+    color: #00ffff;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #32323f;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #25252f;
+    color: #00ffff;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(30, 30, 40, 0.6);
+}
+
+tr:hover {
+    background-color: rgba(138, 43, 226, 0.1);
+}
+
+/* Tombol Clear History */
+#clearHistory {
+    background: linear-gradient(45deg, #f44336, #d32f2f);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    display: block;
+    margin-left: auto;
+    transition: all 0.3s ease;
+}
+
+#clearHistory:hover {
+    background: linear-gradient(45deg, #ff5346, #e33f3f);
+    box-shadow: 0 0 15px rgba(244, 67, 54, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Grid Huruf untuk Tebak Kata */
+.letter-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    gap: 8px;
+}
+
+.letter-row {
+    display: flex;
+    gap: 8px;
+}
+
+.letter-cell {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(79, 236, 253, 0.3);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e0e0e0;
+    background-color: #2a2a38;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+/* Animasi untuk Reveal Huruf */
+@keyframes flipReveal {
+    0% {
+        transform: rotateX(0);
+        background-color: #2a2a38;
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+.letter-cell.reveal {
+    animation: flipReveal 0.5s ease;
+}
+
+.letter-cell.correct {
+    background-color: rgba(46, 255, 135, 0.2);
+    border-color: #2eff87;
+    box-shadow: 0 0 10px rgba(46, 255, 135, 0.3);
+    color: #2eff87;
+}
+
+.letter-cell.partial {
+    background-color: rgba(255, 204, 0, 0.2);
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+    color: #ffcc00;
+}
+
+.letter-cell.wrong {
+    background-color: rgba(255, 79, 79, 0.1);
+    border-color: rgba(255, 79, 79, 0.5);
+    color: #6f6f80;
+}
+
+/* Keyboard untuk Mobile */
+.virtual-keyboard {
+    display: none;  /* Default tersembunyi, tampilkan di mobile */
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.key {
+    width: 8vw;
+    min-width: 30px;
+    height: 45px;
+    background-color: #32323f;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.key:hover, .key:active {
+    background-color: #42424f;
+    transform: translateY(-2px);
+}
+
+.key.enter {
+    width: 15vw;
+    min-width: 60px;
+    background: linear-gradient(45deg, #8a2be2, #4a2be2);
+}
+
+.key.backspace {
+    width: 12vw;
+    min-width: 50px;
+    background-color: #444452;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        background-size: 40px 40px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    
+    .stat {
+        min-width: auto;
+        flex: 1;
+        margin: 5px;
+        padding: 6px 10px;
+    }
+    
+    .game-settings {
+        flex-direction: column;
+    }
+    
+    .select-wrapper {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    select {
+        width: 100%;
+    }
+    
+    input[type="text"] {
+        padding: 12px;
+    }
+    
+    .game-controls {
+        flex-direction: column;
+    }
+    
+    .game-controls > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .letter-cell {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    /* Tampilkan keyboard virtual di mobile */
+    .virtual-keyboard {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    #hint {
+        font-size: 0.9rem;
+    }
+    
+    .letter-cell {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .stats {
+        padding: 8px;
+    }
+    
+    .stat {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+    
+    .stat span {
+        font-size: 1.1rem;
+    }
+}

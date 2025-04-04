@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba Tebak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="gameTitle">Coba Tebak Kata</h1>
+        
+        <div class="stats">
+            <div class="stat">
+                Skor: <span id="score">0</span>
+            </div>
+            <div class="stat">
+                Waktu: <span id="timer">30</span>
+            </div>
+            <div class="stat">
+                Petunjuk: <span id="hintCount">3</span>
+            </div>
+        </div>
+        
+        <div class="game-settings">
+            <select id="difficulty">
+                <option value="easy">Mudah</option>
+                <option value="medium" selected>Sedang</option>
+                <option value="hard">Sulit</option>
+                <option value="random">Random</option>
+            </select>
+            
+            <select id="category">
+                <option value="fruits">Buah-buahan</option>
+                <option value="animals">Hewan</option>
+                <option value="places">Tempat</option>
+            </select>
+        </div>
+        
+        <div class="game-container">
+            <p id="hint">Tebak kata!</p>
+            
+            <div class="input-container">
+                <input type="text" id="guess" maxlength="" placeholder="Masukkan tebakan Anda...">
+                <button id="submit">Submit</button>
+            </div>
+            
+            <div id="result"></div>
+            
+            <div class="game-controls">
+                <div>
+                    <button id="clueButton">Gunakan Petunjuk</button>
+                    <button id="spinButton" style="display: none;">Putar</button>
+                    <button id="newWord">Kata Baru</button>
+                </div>
+                <div>
+                    <button id="history">Riwayat</button>
+                    <button id="switchGame">Coba Tebak Angka</button>
+                    <button id="giveup">Menyerah</button>
+                    <button id="reset" style="display: none;">Mulai Baru</button>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; color: #888; font-size: 0.8rem;">
+            @216Rafii on X
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
